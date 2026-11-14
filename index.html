@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Sorting Algorithm Visualizer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="stylesheet" href="style.css"></head><body><div class="wrap">
+<header><h1>Sorting Algorithm Visualizer</h1><p>Watch four algorithms sort the same array, side by side</p></header>
+<div class="bar">
+<label>Array size <input id="size" type="number" min="10" max="100" value="40"></label>
+<label>Speed <input id="speed" type="range" min="1" max="100" value="60"></label>
+<button id="gen">Generate new array</button><button id="run">Run all algorithms</button><button id="reset">Reset</button>
+<span class="hint">Every algorithm gets an identical copy of the array. Amber = comparing, red = swapping.</span></div>
+<div class="panel"><h2>Original random array</h2><canvas id="orig"></canvas></div>
+<div class="grid" id="grid"></div>
+<div class="cmp"><div><h2 style="font-size:13px;margin:0 0 6px">Performance comparison (same input array)</h2>
+<table><thead><tr><th>Algorithm</th><th>Time (ms)</th><th>Comparisons</th><th>Swaps</th><th>Time complexity</th></tr></thead><tbody id="tb"></tbody></table></div>
+<div><h2 style="font-size:13px;margin:0 0 6px;text-align:center">Execution time comparison (ms)</h2><canvas id="chart"></canvas></div></div>
+<footer>Different algorithms, different strategies, same goal: a sorted array</footer></div>
+<script src="script.js"></script></body></html>
